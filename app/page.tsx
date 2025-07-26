@@ -291,7 +291,7 @@ const UseCaseDeepDive = () => {
   const activeUseCase = useCases[activeTab as keyof typeof useCases];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-charcoal-100/10 via-charcoal to-charcoal-100/10 relative">
+    <section className="py-32 bg-gradient-to-br from-charcoal-100/10 via-charcoal to-charcoal-100/10 relative bg-grid-pattern">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,229,255,0.08),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,229,255,0.05),transparent_50%)]"></div>
       <div className="container-max relative z-10">
@@ -418,39 +418,41 @@ const TrustSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-charcoal-100/10 via-charcoal to-charcoal-100/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,229,255,0.08),transparent_40%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(138,43,226,0.08),transparent_40%)]"></div>
-      <div className="container-max relative z-10">
-        <motion.h2 
-          className="text-4xl md:text-6xl font-bold text-center mb-4 text-white"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Unwavering Security & Compliance
-        </motion.h2>
-        <motion.p 
-          className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          We are committed to the highest standards of data security and regulatory adherence, ensuring your sensitive information is always protected.
-        </motion.p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {complianceLogos.map((logo, index) => (
-            <motion.div
-              key={logo.name}
-              className="flex flex-col items-center justify-center p-6 bg-white/5 rounded-lg border border-white/10"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-            >
-              <div className="text-electric mb-4">{logo.icon}</div>
-              <span className="text-white font-semibold">{logo.name}</span>
-            </motion.div>
-          ))}
+    <section className="py-24">
+      <div className="container-max relative bg-charcoal-50 rounded-3xl p-16 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,229,255,0.08),transparent_40%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(138,43,226,0.08),transparent_40%)]"></div>
+        <div className="relative z-10">
+          <motion.h2 
+            className="text-4xl md:text-6xl font-bold text-center mb-4 text-white"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Unwavering Security & Compliance
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            We are committed to the highest standards of data security and regulatory adherence, ensuring your sensitive information is always protected.
+          </motion.p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {complianceLogos.map((logo, index) => (
+              <motion.div
+                key={logo.name}
+                className="flex flex-col items-center justify-center p-6 bg-white/5 rounded-lg border border-white/10"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              >
+                <div className="text-electric mb-4">{logo.icon}</div>
+                <span className="text-white font-semibold">{logo.name}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -514,8 +516,9 @@ export default function Home() {
       <HeroSection />
       <ScrollNarrative />
       <UseCaseDeepDive />
-      <section className="py-20">
-        <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-white">Features</h2>
+      <section className="py-20 bg-blue-dot-pattern">
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 text-white">Why Audit?</h2>
+        <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.</p>
         <CardCarousel />
       </section>
       <TrustSection />

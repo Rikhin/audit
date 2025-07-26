@@ -112,6 +112,23 @@
       radial-gradient(circle at 80% 20%, rgba(0, 229, 255, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 40% 40%, rgba(0, 229, 255, 0.05) 0%, transparent 50%);
   }
+
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to right, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+    background-size: 1.5rem 1.5rem;
+  }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0);
+    background-size: 1.5rem 1.5rem;
+  }
+
+  .bg-blue-dot-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 229, 255, 0.1) 1px, transparent 0);
+    background-size: 1.5rem 1.5rem;
+  }
 }
 
 /* Custom scrollbar */

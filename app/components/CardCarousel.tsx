@@ -61,8 +61,8 @@ const CardCarousel = () => {
     const y = -absDisplayIndex * 30; // Invert to a U-shape curve
     const scale = isCenter ? 1.2 : 0.9; // Make all cards bigger
     const zIndex = totalCards - absDisplayIndex;
-    const opacity = isCenter ? 1 : 0.4;
-    const filter = isCenter ? 'blur(0px)' : 'blur(4px)';
+    const opacity = isCenter ? 1 : 0.7;
+    const filter = isCenter ? 'blur(0px)' : 'blur(2px)';
 
     return {
       transform: `translateX(${x}px) translateY(${y}px) scale(${scale})`,
