@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Work Sans"', 'sans-serif'],
+        grotesk: ['"Space Grotesk"', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -90,6 +94,19 @@ module.exports = {
           800: "#333333",
           900: "#2A2A2A",
         },
+        'neon-green': {
+          DEFAULT: '#39FF14',
+          50: '#E9FFF0',
+          100: '#D3FFDF',
+          200: '#A7FFBF',
+          300: '#7BFF9F',
+          400: '#4FFF7F',
+          500: '#39FF14',
+          600: '#2ECC0F',
+          700: '#22990B',
+          800: '#186607',
+          900: '#0E3304'
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -134,6 +151,10 @@ module.exports = {
           "60%": { transform: "translate(2px, 2px)" },
           "80%": { transform: "translate(2px, -2px)" },
         },
+        "glow-green": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(57, 255, 20, 0.3)" },
+          "50%": { boxShadow: "0 0 40px rgba(57, 255, 20, 0.6)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -143,6 +164,7 @@ module.exports = {
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
         "glitch": "glitch 0.3s ease-in-out infinite",
+        "glow-green": "glow-green 2s ease-in-out infinite",
       },
     },
   },

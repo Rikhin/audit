@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -57,9 +59,18 @@
     @apply border-border;
   }
   body {
-    @apply bg-charcoal text-white font-['IBM_Plex_Sans',sans-serif];
+    @apply bg-charcoal text-white font-sans;
     background: linear-gradient(135deg, #0E0E10 0%, #1a1a1c 50%, #0E0E10 100%);
     min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-grotesk;
   }
 }
 
