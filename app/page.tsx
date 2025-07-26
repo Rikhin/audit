@@ -67,21 +67,21 @@ const Button = ({
 // Navigation Component
 const Navigation = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4">
-      <nav className="w-full max-w-5xl mx-auto bg-gray-800/50 backdrop-blur-lg rounded-full border border-white/10 shadow-lg">
-        <div className="flex items-center justify-between h-16 px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      <nav className="w-full max-w-7xl mx-auto px-8 py-6">
+        <div className="flex items-center justify-center space-x-12">
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/images/Startup_Multimedia_Letter_A_by_Design-removebg-preview.png" 
+              src="images/Startup_Multimedia_Letter_A_by_Design-removebg-preview.png" 
               alt="Audit Logo" 
-              className="w-10 h-10 mr-3"
+              className="w-8 h-8 mr-2"
             />
-            <span className="text-white font-bold text-2xl">Audit</span>
+            <span className="text-white font-medium text-xl">Audit</span>
           </div>
           
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-12">
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Home</a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Features</a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Pricing</a>
@@ -90,15 +90,8 @@ const Navigation = () => {
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">About Us</a>
           </div>
           
-          {/* Auth Buttons */}
-          <div className="flex items-center space-x-2">
-            <Button variant="ghost" className="text-sm px-4 py-2">
-              Login
-            </Button>
-            <Button variant="primary" className="text-sm px-4 py-2 rounded-full">
-              Sign Up
-            </Button>
-          </div>
+          {/* Empty div to balance the flex layout */}
+          <div className="w-20"></div>
         </div>
       </nav>
     </header>
