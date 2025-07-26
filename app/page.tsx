@@ -516,10 +516,14 @@ export default function Home() {
       <HeroSection />
       <ScrollNarrative />
       <UseCaseDeepDive />
-      <section className="py-20 bg-blue-dot-pattern">
-        <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 text-white">Why Audit?</h2>
-        <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.</p>
-        <CardCarousel />
+      <section className="py-24 bg-blue-dot-pattern">
+        <div className="container-max mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white">Why Audit?</h2>
+          <p className="text-lg text-gray-300 text-center mb-16 max-w-3xl mx-auto">Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.</p>
+          <div className="mt-4">
+            <CardCarousel />
+          </div>
+        </div>
       </section>
       <TrustSection />
       <CallToAction />
