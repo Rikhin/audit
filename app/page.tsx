@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { 
@@ -71,21 +72,14 @@ const Navigation = () => {
       <nav className="w-full max-w-5xl mx-auto bg-gray-800/50 backdrop-blur-lg rounded-full border border-white/10 shadow-lg">
         <div className="flex items-center justify-between h-16 px-8">
           {/* Logo */}
-          <div className="flex items-center h-full">
-            <div className="flex items-center justify-center h-10 w-10 overflow-hidden">
-              <img 
-                src="/images/Startup Multimedia Letter A by Design.png" 
-                alt="Audit Logo" 
-                className="h-full w-auto max-w-none object-contain"
-                style={{
-                  filter: 'brightness(0) invert(1)'
-                }}
-                onError={(e) => {
-                  // Fallback in case the image fails to load
-                  const target = e.target as HTMLImageElement;
-                  target.onerror = null;
-                  target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik05IDEybDIgMiA0LTRtNiAyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiI+PC9wYXRoPjwvc3ZnPg=';
-                }}
+          <div className="flex items-center">
+            <div className="h-8 w-8 relative">
+              <Image
+                src="/images/Startup Multimedia Letter A by Design.png"
+                alt="Audit Logo"
+                fill
+                className="object-contain"
+                priority
               />
             </div>
             <span className="text-white font-bold text-xl ml-3">Audit</span>
