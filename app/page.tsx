@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 
 import { HeroBackground } from './components/HeroBackground';
+import { WaitlistModal } from './components/WaitlistModal';
 
 const ScrollNarrative = dynamic(() =>
   import('./components/ScrollNarrative').then(mod => mod.ScrollNarrative),
@@ -75,9 +76,9 @@ const Navigation = () => {
             <img 
               src="/images/Startup_Multimedia_Letter_A_by_Design-removebg-preview.png" 
               alt="Audit Logo" 
-              className="w-10 h-10 mr-3"
+              className="w-14 h-14"
             />
-            <span className="text-white font-bold text-2xl">Audit</span>
+            <span className="text-white font-bold text-2xl -ml-1">Audit</span>
           </div>
           
           {/* Navigation Links */}
@@ -107,66 +108,48 @@ const Navigation = () => {
 
 // Hero Section
 const HeroSection = () => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = React.useState(false)
+  
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-charcoal overflow-hidden">
-      <HeroBackground />
-      
-      <div className="container-max px-4 z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight heading-glow">
-            <span className="relative inline-block">
-              Audit
-              <svg
-                className="absolute -bottom-3 left-0 w-full h-auto"
-                viewBox="0 0 150 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+    <>
+      <section className="relative min-h-screen flex items-center justify-center bg-charcoal overflow-hidden">
+        <HeroBackground />
+        
+        <div className="container-max px-4 z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-none tracking-tight">
+              Audit: AI, <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">Explained</span>.
+            </h1>
+            <p className="text-xl text-gray-300 mt-12 mb-16 max-w-3xl mx-auto leading-relaxed">
+              The most comprehensive AI auditing platform for enterprises. 
+              Ensure compliance, security, and transparency in your AI systems.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="group"
+                onClick={() => setIsWaitlistOpen(true)}
               >
-                <path
-                  d="M1.16992 9.5C25.6699 4.16667 87.6699 -3.5 148.17 9.5"
-                  stroke="url(#paint0_linear_1_101)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_1_101"
-                    x1="0"
-                    y1="9.5"
-                    x2="150"
-                    y2="9.5"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#8A2BE2" />
-                    <stop offset="1" stopColor="#00E5FF" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </span>
-            : AI, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Explained</span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Reveal the why behind every AI answer. Enterprise-grade traceability for healthcare, legal, and finance — every decision, every step, fully auditable.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" className="px-8 py-4 text-lg group">
-              Join the waitlist
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="secondary" className="px-8 py-4 text-lg">
-              <Play className="mr-2 h-5 w-5" />
-              See How It Works
-            </Button>
-          </div>
-          
-          <div className="mt-8 text-sm text-gray-400">
-            SOC 2 Compliant • HIPAA Ready • 99.9% Uptime
+                Join the waitlist
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="secondary" className="px-8 py-4 text-lg">
+                <Play className="mr-2 h-5 w-5" />
+                See How It Works
+              </Button>
+            </div>
+            
+            <div className="mt-8 text-sm text-gray-400">
+              SOC 2 Compliant • HIPAA Ready • 99.9% Uptime
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      <WaitlistModal 
+        isOpen={isWaitlistOpen} 
+        onClose={() => setIsWaitlistOpen(false)} 
+      />
+    </>
   )
 }
 
