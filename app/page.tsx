@@ -67,21 +67,21 @@ const Button = ({
 // Navigation Component
 const Navigation = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <nav className="w-full max-w-7xl mx-auto px-8 py-6">
-        <div className="flex items-center justify-center space-x-12">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4">
+      <nav className="w-full max-w-5xl mx-auto bg-gray-800/50 backdrop-blur-lg rounded-full border border-white/10 shadow-lg">
+        <div className="flex items-center justify-between h-16 px-8">
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="images/Startup_Multimedia_Letter_A_by_Design-removebg-preview.png" 
+              src="/images/Startup_Multimedia_Letter_A_by_Design-removebg-preview.png" 
               alt="Audit Logo" 
-              className="w-8 h-8 mr-2"
+              className="w-10 h-10 mr-3"
             />
-            <span className="text-white font-medium text-xl">Audit</span>
+            <span className="text-white font-bold text-2xl">Audit</span>
           </div>
           
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-6">
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Home</a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Features</a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Pricing</a>
@@ -90,8 +90,15 @@ const Navigation = () => {
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">About Us</a>
           </div>
           
-          {/* Empty div to balance the flex layout */}
-          <div className="w-20"></div>
+          {/* Auth Buttons */}
+          <div className="flex items-center space-x-2">
+            <Button variant="ghost" className="text-sm px-4 py-2">
+              Login
+            </Button>
+            <Button variant="primary" className="text-sm px-4 py-2 rounded-full">
+              Sign Up
+            </Button>
+          </div>
         </div>
       </nav>
     </header>
@@ -106,7 +113,7 @@ const HeroSection = () => {
       
       <div className="container-max px-4 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight heading-glow">
             <span className="relative inline-block">
               Audit
               <svg
@@ -291,7 +298,7 @@ const UseCaseDeepDive = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,229,255,0.05),transparent_50%)]"></div>
       <div className="container-max relative z-10">
         <motion.h2 
-          className="text-4xl md:text-6xl font-bold text-center mb-4 text-white"
+          className="text-4xl md:text-6xl font-bold text-center mb-4 text-white heading-glow"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -419,7 +426,7 @@ const TrustSection = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(138,43,226,0.08),transparent_40%)]"></div>
         <div className="relative z-10">
           <motion.h2 
-            className="text-4xl md:text-6xl font-bold text-center mb-4 text-white"
+            className="text-4xl md:text-6xl font-bold text-center mb-4 text-white heading-glow"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -513,7 +520,7 @@ export default function Home() {
       <UseCaseDeepDive />
       <section className="py-24 bg-blue-dot-pattern">
         <div className="container-max mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white">Why Audit?</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white heading-glow">Why Audit?</h2>
           <p className="text-lg text-gray-300 text-center mb-16 max-w-3xl mx-auto">Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.</p>
           <div className="mt-4">
             <CardCarousel />
