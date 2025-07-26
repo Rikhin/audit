@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { 
@@ -73,16 +72,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 px-8">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="h-8 w-8 relative">
-              <Image
-                src="/images/Startup Multimedia Letter A by Design.png"
-                alt="Audit Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-            <span className="text-white font-bold text-xl ml-3">Audit</span>
+            <img 
+              src="/images/Startup_Multimedia_Letter_A_by_Design-removebg-preview.png" 
+              alt="Audit Logo" 
+              className="w-10 h-10 mr-3"
+            />
+            <span className="text-white font-bold text-2xl">Audit</span>
           </div>
           
           {/* Navigation Links */}
@@ -157,7 +152,7 @@ const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="primary" className="px-8 py-4 text-lg group">
-              Start Free Trial
+              Join the waitlist
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="secondary" className="px-8 py-4 text-lg">
