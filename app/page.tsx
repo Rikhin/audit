@@ -72,10 +72,18 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 px-8">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-blue-500 rounded-md mr-3 flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <span className="text-white font-bold text-xl">Audit</span>
+            <img 
+              src="/images/Startup Multimedia Letter A by Design.png" 
+              alt="Audit Logo" 
+              className="h-8 w-auto object-contain"
+              onError={(e) => {
+                // Fallback in case the image fails to load
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik05IDEybDIgMiA0LTRtNiAyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiI+PC9wYXRoPjwvc3ZnPg==';
+              }}
+            />
+            <span className="text-white font-bold text-xl ml-3">Audit</span>
           </div>
           
           {/* Navigation Links */}
