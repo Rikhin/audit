@@ -22,10 +22,7 @@ import {
   FileCheck
 } from 'lucide-react'
 
-const HeroBackground = dynamic(() => 
-  import('./components/HeroBackground').then(mod => mod.HeroBackground),
-  { ssr: false }
-);
+import { HeroBackground } from './components/HeroBackground';
 
 const ScrollNarrative = dynamic(() =>
   import('./components/ScrollNarrative').then(mod => mod.ScrollNarrative),
@@ -515,13 +512,13 @@ export default function Home() {
     <main className="bg-charcoal text-white font-sans">
       <Navigation />
       <HeroSection />
+      <ScrollNarrative />
       <UseCaseDeepDive />
-      <TrustSection />
       <section className="py-20">
-        <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-white">What Our Customers Say</h2>
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-white">Features</h2>
         <CardCarousel />
       </section>
-      <ScrollNarrative />
+      <TrustSection />
       <CallToAction />
       <Footer />
     </main>
