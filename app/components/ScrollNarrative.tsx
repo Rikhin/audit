@@ -17,8 +17,7 @@ export const ScrollNarrative = () => {
   return (
     <div className="relative">
       {/* Section 1: The Model Traceability Gap */}
-      <section className="py-12 md:py-16 flex items-center bg-gradient-to-br from-charcoal via-charcoal-100/5 to-charcoal relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,229,255,0.02)_25%,rgba(0,229,255,0.02)_50%,transparent_50%,transparent_75%,rgba(0,229,255,0.02)_75%)] bg-[length:20px_20px]"></div>
+      <section className="py-12 md:py-16 flex items-center bg-charcoal relative overflow-hidden">
         <div className="container-max relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -77,8 +76,7 @@ export const ScrollNarrative = () => {
       </section>
 
       {/* Section 2: Decision Traceability for RAG */}
-      <section className="py-12 md:py-16 flex items-center bg-gradient-to-br from-charcoal via-charcoal-100/5 to-charcoal relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,229,255,0.02)_25%,rgba(0,229,255,0.02)_50%,transparent_50%,transparent_75%,rgba(0,229,255,0.02)_75%)] bg-[length:20px_20px]"></div>
+      <section className="py-12 md:py-16 flex items-center bg-charcoal relative overflow-hidden">
         <div className="container-max relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -137,8 +135,7 @@ export const ScrollNarrative = () => {
       </section>
 
       {/* Section 3: Seamless Integration */}
-      <section className="py-12 md:py-16 flex items-center bg-gradient-to-br from-charcoal via-charcoal-100/5 to-charcoal relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,229,255,0.02)_25%,rgba(0,229,255,0.02)_50%,transparent_50%,transparent_75%,rgba(0,229,255,0.02)_75%)] bg-[length:20px_20px]"></div>
+      <section className="py-12 md:py-16 flex items-center bg-charcoal relative overflow-hidden">
         <div className="container-max relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

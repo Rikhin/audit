@@ -21,13 +21,18 @@ import {
   Building,
   FileCheck,
   X,
-  Clock
+  Clock,
+  ChevronDown
 } from 'lucide-react'
 
 import { HeroBackground } from './components/HeroBackground';
 import { WaitlistModal } from './components/WaitlistModal';
 import Navigation from './components/Navigation';
-import FAQSection from './components/FAQSection';
+import UseCaseDeepDive from './components/UseCaseDeepDive';
+import TrustSection from './components/TrustSection';
+import PricingSection from './components/PricingSection';
+import CallToAction from './components/CallToAction';
+import Footer from './components/Footer';
 
 const ScrollNarrative = dynamic(() =>
   import('./components/ScrollNarrative').then(mod => mod.ScrollNarrative),
@@ -170,17 +175,24 @@ export default function Home() {
         <ScrollNarrative />
       </section>
       
-      <section id="why-audit" className="relative py-24 bg-blue-dot-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal/0 -z-10"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-charcoal to-transparent -z-10"></div>
-        <div className="container-max mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white heading-glow">Why Audit?</h2>
-          <p className="text-lg text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-            Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.
-          </p>
-          <div className="mt-4">
-            <CardCarousel />
-          </div>
+      <section id="why-audit" className="relative py-32 overflow-hidden w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4">
+          <motion.div 
+            className="w-full bg-black/90 backdrop-blur-sm rounded-3xl p-12 md:p-16 border-2 border-electric/40 hover:border-electric/60 transition-all duration-500"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white">
+              Why <span className="bg-clip-text text-transparent bg-gradient-to-r from-electric via-cyan-400 to-blue-400 animate-text">Audit</span>?
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.
+            </p>
+            <div className="mt-8">
+              <CardCarousel />
+            </div>
+          </motion.div>
         </div>
       </section>
       

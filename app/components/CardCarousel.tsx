@@ -87,7 +87,7 @@ const CardCarousel = () => {
           {cards.map((card: { icon: JSX.Element; title: string; description: string }, i: number) => (
             <motion.div
               key={i}
-              className="absolute w-96 h-64 bg-charcoal-100/20 backdrop-blur-xl rounded-2xl p-8 flex flex-col items-center justify-center text-center border border-electric/20 shadow-lg shadow-electric/10"
+              className="absolute w-96 h-64 bg-black/80 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center justify-center text-center border-2 border-electric/40 hover:border-electric/60 transition-all duration-500"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={getCardStyle(i)}
               exit={{ opacity: 0, scale: 0.5 }}
