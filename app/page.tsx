@@ -26,6 +26,7 @@ import {
 } from 'lucide-react'
 
 import { HeroBackground } from './components/HeroBackground';
+import { CornerBorder } from './components/CornerBorder';
 import { WaitlistModal } from './components/WaitlistModal';
 import Navigation from './components/Navigation';
 import UseCaseDeepDive from './components/UseCaseDeepDive';
@@ -175,23 +176,25 @@ export default function Home() {
         <ScrollNarrative />
       </section>
       
-      <section id="why-audit" className="relative py-32 overflow-hidden w-full">
+      <section id="why-audit" className="relative py-32 overflow-hidden w-full bg-charcoal">
         <div className="w-full max-w-[1600px] mx-auto px-4">
           <motion.div 
-            className="w-full bg-black/90 backdrop-blur-sm rounded-3xl p-12 md:p-16 border-2 border-electric/40 hover:border-electric/60 transition-all duration-500"
+            className="relative"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white">
-              Why <span className="bg-clip-text text-transparent bg-gradient-to-r from-electric via-cyan-400 to-blue-400 animate-text">Audit</span>?
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.
-            </p>
-            <div className="mt-8">
-              <CardCarousel />
-            </div>
+            <CornerBorder className="bg-black/90 backdrop-blur-sm p-8 md:p-12">
+              <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white">
+                Why <span className="bg-clip-text text-transparent bg-gradient-to-r from-electric via-cyan-400 to-blue-400 animate-text">Audit</span>?
+              </h2>
+              <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+                Unlock unparalleled transparency and control over your AI systems with our comprehensive traceability platform.
+              </p>
+              <div className="mt-8">
+                <CardCarousel />
+              </div>
+            </CornerBorder>
           </motion.div>
         </div>
       </section>
