@@ -56,7 +56,13 @@ const FAQSection = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Everything you need to know about Audit. Can't find the answer you're looking for?{' '}
-            <a href="#contact" className="text-electric hover:text-cyan-400 transition-colors">Contact our team</a>.
+            <a 
+              href="mailto:rikhinkavuru@icloud.com?subject=Audit Tool Inquiry&body=Hello, I have a question about Audit." 
+              className="text-electric hover:text-cyan-400 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Contact our team
+            </a>.
           </p>
         </motion.div>
 

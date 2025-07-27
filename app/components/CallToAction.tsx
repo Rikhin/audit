@@ -49,9 +49,12 @@ const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
+          <a 
+            href="mailto:rikhinkavuru@icloud.com?subject=Schedule a Demo - Audit Tool&body=Hello, I'd like to schedule a demo of the Audit tool." 
+            className="px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-lg hover:bg-white/10 transition-colors inline-block"
+          >
             Schedule a Demo
-          </button>
+          </a>
         </motion.div>
         
         <motion.div 

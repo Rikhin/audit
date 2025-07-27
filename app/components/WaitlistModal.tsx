@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { X } from 'lucide-react'
-import { addToWaitlist, isEmailInWaitlist } from '../../src/lib/supabase/waitlist'
 
 export function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [email, setEmail] = useState('')
@@ -24,37 +23,39 @@ export function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: (
       return
     }
 
-    console.log('Starting form submission for email:', email)
     setIsLoading(true)
     setMessage(null)
 
     try {
-      console.log('Checking if email exists in waitlist...')
-      const alreadyExists = await isEmailInWaitlist(email)
-      
-      if (alreadyExists) {
-        console.log('Email already exists in waitlist')
-        setMessage({ text: 'This email is already on the waitlist!', isError: false })
-        setTimeout(onClose, 2000)
-        return
-      }
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
 
-      console.log('Email not found in waitlist, proceeding to add...')
-      await addToWaitlist(email)
-      console.log('Successfully added to waitlist')
+      const data = await response.json()
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to add to waitlist')
+      }
       
       setMessage({ 
-        text: 'Thanks for joining the waitlist! We\'ll be in touch soon.', 
+        text: data.message || 'Thanks for joining the waitlist! We\'ll be in touch soon.', 
         isError: false 
       })
+      
       setEmail('')
-      setTimeout(onClose, 2000)
+      
+      // Only close automatically on success
+      if (response.status === 200) {
+        setTimeout(onClose, 2000)
+      }
     } catch (error: any) {
       console.error('Error in handleSubmit:', error)
-      const errorMessage = error?.message || 'An unknown error occurred'
-      
       setMessage({ 
-        text: `Something went wrong: ${errorMessage}`, 
+        text: error?.message || 'Something went wrong. Please try again.', 
         isError: true 
       })
     } finally {

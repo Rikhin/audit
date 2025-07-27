@@ -49,7 +49,7 @@ const Footer = () => {
     { icon: <Twitter className="h-5 w-5" />, href: 'https://twitter.com', label: 'Twitter' },
     { icon: <Github className="h-5 w-5" />, href: 'https://github.com', label: 'GitHub' },
     { icon: <Linkedin className="h-5 w-5" />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <Mail className="h-5 w-5" />, href: 'mailto:contact@audit.ai', label: 'Email' },
+    { icon: <Mail className="h-5 w-5" />, href: 'mailto:rikhinkavuru@icloud.com', label: 'Email' },
   ];
 
   return (

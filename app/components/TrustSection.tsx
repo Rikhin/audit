@@ -102,12 +102,15 @@ const TrustSection = () => {
 
         <div className="mt-20 text-center">
           <p className="text-gray-400 mb-6 text-lg">Have specific compliance requirements?</p>
-          <button className="px-6 py-3 bg-electric/10 hover:bg-electric/20 text-electric font-medium rounded-lg flex items-center justify-center mx-auto group transition-colors duration-300 border border-electric/20 hover:border-electric/50">
+          <a 
+            href="mailto:rikhinkavuru@icloud.com?subject=Security Team Inquiry - Audit Tool&body=Hello, I have specific compliance requirements I'd like to discuss with your security team." 
+            className="inline-flex items-center px-6 py-3 bg-electric/10 hover:bg-electric/20 text-electric font-medium rounded-lg mx-auto group transition-colors duration-300 border border-electric/20 hover:border-electric/50"
+          >
             Contact our security team
             <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
     </section>
