@@ -24,29 +24,37 @@ export function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: (
       return
     }
 
+    console.log('Starting form submission for email:', email)
     setIsLoading(true)
     setMessage(null)
 
     try {
+      console.log('Checking if email exists in waitlist...')
       const alreadyExists = await isEmailInWaitlist(email)
       
       if (alreadyExists) {
+        console.log('Email already exists in waitlist')
         setMessage({ text: 'This email is already on the waitlist!', isError: false })
         setTimeout(onClose, 2000)
         return
       }
 
+      console.log('Email not found in waitlist, proceeding to add...')
       await addToWaitlist(email)
+      console.log('Successfully added to waitlist')
+      
       setMessage({ 
         text: 'Thanks for joining the waitlist! We\'ll be in touch soon.', 
         isError: false 
       })
       setEmail('')
       setTimeout(onClose, 2000)
-    } catch (error) {
-      console.error('Error adding to waitlist:', error)
+    } catch (error: any) {
+      console.error('Error in handleSubmit:', error)
+      const errorMessage = error?.message || 'An unknown error occurred'
+      
       setMessage({ 
-        text: 'Something went wrong. Please try again.', 
+        text: `Something went wrong: ${errorMessage}`, 
         isError: true 
       })
     } finally {

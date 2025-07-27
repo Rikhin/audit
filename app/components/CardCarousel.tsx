@@ -2,33 +2,41 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Database, Zap, FileText, Shield, Eye } from 'lucide-react';
+import { 
+  ArrowLeft, 
+  ArrowRight, 
+  GitBranch, 
+  GitCommit, 
+  GitPullRequest, 
+  GitMerge, 
+  GitCompare 
+} from 'lucide-react';
 
 const cards = [
   {
-    icon: <Database className="w-10 h-10 text-electric" />,
-    title: 'Data & Model Lineage',
-    description: 'Trace every piece of data and model version used in a decision, ensuring complete reproducibility.',
+    icon: <GitBranch className="w-10 h-10 text-electric" />,
+    title: 'End-to-End Traceability',
+    description: 'Follow the complete decision path of your AI models, from input data to final output, with full visibility into every step.',
   },
   {
-    icon: <Zap className="w-10 h-10 text-electric" />,
-    title: 'Real-time Inference Tracking',
-    description: 'Monitor AI decision-making processes as they happen, with live data streams and visualizations.',
+    icon: <GitCommit className="w-10 h-10 text-electric" />,
+    title: 'Model Decision Logs',
+    description: 'Maintain detailed logs of model decisions, including confidence scores and alternative paths considered.',
   },
   {
-    icon: <FileText className="w-10 h-10 text-electric" />,
-    title: 'Immutable Audit Logs',
-    description: 'Generate cryptographically-secured logs for every action, providing a tamper-proof chain of custody.',
+    icon: <GitPullRequest className="w-10 h-10 text-electric" />,
+    title: 'RAG Integration',
+    description: 'Seamlessly integrate with your existing RAG pipelines to trace how retrieved information influences model outputs.',
   },
   {
-    icon: <Shield className="w-10 h-10 text-electric" />,
-    title: 'Compliance Verification',
-    description: 'Automatically verify and document compliance with internal policies and external regulations.',
+    icon: <GitMerge className="w-10 h-10 text-electric" />,
+    title: 'Multi-Model Analysis',
+    description: 'Compare and contrast how different models process the same inputs, identifying strengths and weaknesses.',
   },
   {
-    icon: <Eye className="w-10 h-10 text-electric" />,
-    title: 'Explainable AI (XAI) Insights',
-    description: 'Integrate with XAI frameworks to provide human-readable explanations for complex model behaviors.',
+    icon: <GitCompare className="w-10 h-10 text-electric" />,
+    title: 'Version Comparison',
+    description: 'Track how model behavior changes between versions, with detailed diffs of decision-making patterns.',
   },
 ];
 
