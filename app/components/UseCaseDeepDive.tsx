@@ -164,9 +164,12 @@ const UseCaseDeepDive = () => {
               <div className="max-w-2xl mx-auto text-center">
                 <h3 className="text-xl font-semibold text-[#333333] mb-3">Ready to see it in action?</h3>
                 <p className="text-[#666666] mb-6">Schedule a personalized demo to see how our solution can work for your business.</p>
-                <button className="bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors shadow-md hover:shadow-lg">
+                <a 
+                  href="mailto:rikhinkavuru@icloud.com?subject=Schedule a Demo - Audit Tool&body=Hello, I'd like to schedule a demo for the Audit Tool. Please provide available time slots." 
+                  className="inline-block bg-black hover:bg-gray-800 text-white font-medium py-3 px-8 rounded-full transition-colors shadow-md hover:shadow-lg"
+                >
                   Schedule a Demo
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>
