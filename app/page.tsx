@@ -176,7 +176,7 @@ export default function Home() {
         <ScrollNarrative />
       </section>
       
-      <section id="why-audit" className="relative py-32 overflow-hidden w-full bg-charcoal">
+      <section id="why-audit" className="relative py-40 overflow-hidden w-full bg-charcoal">
         <div className="w-full max-w-[1600px] mx-auto px-4">
           <motion.div 
             className="relative"
@@ -184,7 +184,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <CornerBorder className="bg-black/90 backdrop-blur-sm p-8 md:p-12">
+            <CornerBorder className="bg-black/90 backdrop-blur-sm pt-16 pb-24 px-8 md:px-12">
               <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 text-white">
                 Why <span className="bg-clip-text text-transparent bg-gradient-to-r from-electric via-cyan-400 to-blue-400 animate-text">Audit</span>?
               </h2>

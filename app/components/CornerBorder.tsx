@@ -53,7 +53,7 @@ export const CornerBorder: React.FC<CornerBorderProps> = ({ children, className 
       </div>
 
       {/* Content */}
-      <div className="border-2 border-white p-8 md:p-12">
+      <div className="border-2 border-white/80 py-16 px-8 md:py-24 md:px-12">
         {children}
       </div>
     </div>
