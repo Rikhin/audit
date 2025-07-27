@@ -34,6 +34,7 @@ import TrustSection from './components/TrustSection';
 import PricingSection from './components/PricingSection';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
+import FAQSection from './components/FAQSection';
 
 const ScrollNarrative = dynamic(() =>
   import('./components/ScrollNarrative').then(mod => mod.ScrollNarrative),
@@ -209,6 +210,8 @@ export default function Home() {
       <section id="pricing" className="relative">
         <PricingSection />
       </section>
+      
+      <FAQSection />
       
       <CallToAction onOpenWaitlist={() => setIsWaitlistOpen(true)} />
       

@@ -27,12 +27,19 @@ const Navigation = () => {
             <a href="#faq" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">FAQ</a>
           </div>
           
-          {/* Auth Buttons */}
+          {/* Auth Buttons - Temporarily Disabled */}
           <div className="flex items-center space-x-2">
-            <Button variant="ghost" className="text-sm px-4 py-2">
+            <Button 
+              variant="ghost" 
+              className="text-sm px-4 py-2 text-gray-500 cursor-not-allowed"
+              disabled
+            >
               Login
             </Button>
-            <Button className="text-sm px-4 py-2">
+            <Button 
+              className="text-sm px-4 py-2 bg-gray-700 text-gray-400 cursor-not-allowed"
+              disabled
+            >
               Get Started
               <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
