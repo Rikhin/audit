@@ -113,7 +113,7 @@ const FAQSection = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
               href="#contact" 
-              className="inline-flex items-center justify-center px-6 py-3 bg-electric hover:bg-cyan-500 text-white font-medium rounded-lg transition-colors duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-100 text-black font-medium rounded-lg transition-colors duration-300 border border-gray-300"
             >
               Contact Support
             </a>
