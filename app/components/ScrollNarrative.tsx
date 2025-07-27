@@ -155,59 +155,59 @@ export const ScrollNarrative = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 gap-3"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-lg mx-auto"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="bg-charcoal-100/10 p-4 md:p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
+                className="bg-charcoal-100/10 p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
               >
                 <div className="text-electric mb-3">
                   <svg className="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <div className="text-xl md:text-2xl font-bold text-white mb-1">One API Call</div>
-                <div className="text-sm text-gray-400">To add traceability</div>
+                <div className="text-xl font-bold text-white mb-2">Simple Integration</div>
+                <div className="text-sm text-gray-400">Easily add traceability with minimal code changes</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-charcoal-100/10 p-4 md:p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
+                className="bg-charcoal-100/10 p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
               >
                 <div className="text-electric mb-3">
                   <Shield className="w-8 h-8 mx-auto" />
                 </div>
-                <div className="text-xl md:text-2xl font-bold text-white mb-1">Zero Lock-in</div>
-                <div className="text-sm text-gray-400">Works with any model</div>
+                <div className="text-xl font-bold text-white mb-2">Model Agnostic</div>
+                <div className="text-sm text-gray-400">Works with any model or framework</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-charcoal-100/10 p-4 md:p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
+                className="bg-charcoal-100/10 p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
               >
                 <div className="text-electric mb-3">
                   <CheckCircle className="w-8 h-8 mx-auto" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">-75%</div>
-                <div className="text-sm text-gray-400">Debug Time</div>
+                <div className="text-xl font-bold text-white mb-2">Faster Debugging</div>
+                <div className="text-sm text-gray-400">Reduce time spent diagnosing model behavior</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="bg-charcoal-100/10 p-4 md:p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
+                className="bg-charcoal-100/10 p-6 rounded-xl border border-electric/20 text-center backdrop-blur-sm"
               >
                 <div className="text-electric mb-3">
                   <svg className="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">+15%</div>
-                <div className="text-sm text-gray-400">Model Accuracy</div>
+                <div className="text-xl font-bold text-white mb-2">Better Insights</div>
+                <div className="text-sm text-gray-400">Improve understanding of model decisions</div>
               </motion.div>
             </motion.div>
           </div>

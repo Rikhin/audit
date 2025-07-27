@@ -11,28 +11,24 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: 'What makes Audit different from other AI monitoring tools?',
-      answer: 'Audit provides comprehensive traceability for AI decisions, going beyond basic monitoring to show the complete reasoning chain behind every model output, including data sources, processing steps, and confidence scores.'
+      question: 'What is Audit?',
+      answer: 'Audit is a tool designed to help track and understand AI model decisions by providing visibility into the data and processes that influence model outputs.'
     },
     {
-      question: 'How does Audit ensure data privacy and security?',
-      answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, and strict access controls. Your data is never used for training our models and remains under your control at all times.'
+      question: 'How does Audit handle data?',
+      answer: 'Audit processes your data according to our privacy policy. We recommend reviewing our documentation for specific details about data handling.'
     },
     {
-      question: 'What AI models does Audit support?',
-      answer: 'Audit is model-agnostic and works with all major AI frameworks including OpenAI, Anthropic, LLaMA, and custom models. We support both cloud-based and on-premises deployments.'
+      question: 'What types of models can I use with Audit?',
+      answer: 'Audit is designed to work with various AI models. Please contact us to discuss your specific integration needs.'
     },
     {
-      question: 'How quickly can I integrate Audit with my existing systems?',
-      answer: 'Most teams complete integration in under an hour using our SDKs for Python, JavaScript, and other popular languages. Our documentation includes step-by-step guides for all major platforms.'
+      question: 'How do I integrate Audit?',
+      answer: 'Integration details are available in our documentation. The process varies depending on your specific setup and requirements.'
     },
     {
-      question: 'What kind of support is included?',
-      answer: 'All plans include 24/7 email support, while enterprise plans feature dedicated account management and SLAs. We also offer professional services for complex deployments.'
-    },
-    {
-      question: 'Can I try Audit before committing?',
-      answer: 'Yes, we offer a 14-day free trial with full access to all features. No credit card is required to start your trial.'
+      question: 'How can I get support?',
+      answer: 'Please contact our support team with any questions or issues you encounter.'
     }
   ];
 

@@ -6,54 +6,48 @@ const PricingSection = () => {
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small teams getting started with AI traceability',
+      price: 'Coming Soon',
+      period: '',
+      description: 'For individual developers and small teams',
       features: [
-        'Up to 10K model inferences/month',
-        'Basic audit trails',
-        'Email support',
-        '3-month data retention',
-        'Standard security features'
+        'Basic audit functionality',
+        'Documentation and guides',
+        'Community support',
+        'Core tracing features'
       ],
-      cta: 'Get Started',
+      cta: 'Join Waitlist',
       popular: false,
       highlight: false
     },
     {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'For growing teams with advanced compliance needs',
+      name: 'Team',
+      price: 'Coming Soon',
+      period: '',
+      description: 'For growing teams with collaboration needs',
       features: [
-        'Up to 100K model inferences/month',
-        'Advanced audit trails',
-        'Priority email & chat support',
-        '12-month data retention',
-        'Enhanced security & compliance',
+        'All Starter features',
+        'Team workspaces',
+        'Basic support',
         'API access',
         'Custom metadata support'
       ],
-      cta: 'Start Free Trial',
+      cta: 'Join Waitlist',
       popular: true,
       highlight: true
     },
     {
       name: 'Enterprise',
-      price: 'Custom',
+      price: 'Contact Us',
       period: '',
-      description: 'For organizations with custom requirements',
+      description: 'For organizations with specific requirements',
       features: [
-        'Unlimited model inferences',
-        'Complete audit trail with custom fields',
-        '24/7 dedicated support',
-        'Unlimited data retention',
-        'Enterprise-grade security',
-        'SLA & dedicated success manager',
-        'On-premises deployment',
-        'Custom integrations'
+        'All Team features',
+        'Custom deployment options',
+        'Priority support',
+        'Custom integrations',
+        'Dedicated resources'
       ],
-      cta: 'Contact Sales',
+      cta: 'Contact Us',
       popular: false,
       highlight: false
     }
@@ -84,11 +78,10 @@ const PricingSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 relative inline-block">
-            <span className="relative z-10">Simple, Transparent Pricing</span>
-            <span className="absolute -inset-4 bg-gradient-to-r from-electric/20 to-purple-500/20 blur-2xl -z-10 rounded-full"></span>
+            <span className="relative z-10">Pricing</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Choose the plan that fits your needs. No hidden fees, just straightforward pricing.
+            We're currently in development. Join our waitlist to be notified when we launch.
           </p>
         </motion.div>
         
@@ -151,11 +144,14 @@ const PricingSection = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <p className="text-gray-400 mb-6">Need something custom? We've got you covered.</p>
-          <button className="text-electric hover:text-white font-medium flex items-center justify-center mx-auto group">
-            Contact our sales team
+          <p className="text-gray-400 mb-6">Have questions about our plans?</p>
+          <a 
+            href="mailto:rikhinkavuru@icloud.com?subject=Pricing Inquiry - Audit Tool&body=Hello, I have a question about your pricing plans." 
+            className="text-electric hover:text-white font-medium flex items-center justify-center mx-auto group"
+          >
+            Contact us
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

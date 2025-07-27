@@ -24,51 +24,51 @@ const UseCaseDeepDive = () => {
 
   const useCases: UseCases = {
     healthcare: {
-      title: 'Healthcare Compliance & Safety',
-      description: 'Ensure AI-driven diagnoses and treatment recommendations are transparent, explainable, and compliant with healthcare regulations.',
+      title: 'Healthcare Applications',
+      description: 'Enhancing transparency in healthcare-related AI applications.',
       features: [
-        'Audit trails for all AI-assisted diagnoses',
-        'Explanation of treatment recommendations',
-        'HIPAA-compliant data handling',
-        'Real-time monitoring of model decisions'
+        'Track AI-assisted decision making',
+        'Document analysis and review',
+        'Data handling practices',
+        'Model monitoring capabilities'
       ],
       benefits: [
-        'Reduced liability with comprehensive documentation',
-        'Improved patient trust through transparency',
-        'Streamlined compliance with healthcare regulations',
-        'Faster incident investigation and resolution'
+        'Document decision processes',
+        'Enhance transparency',
+        'Support compliance efforts',
+        'Monitor model behavior'
       ]
     },
     legal: {
-      title: 'Legal Document Analysis',
-      description: 'Provide clear audit trails for AI-powered legal document review and analysis, ensuring accountability in sensitive legal matters.',
+      title: 'Legal Sector',
+      description: 'Supporting document analysis and review in legal contexts.',
       features: [
-        'Traceability for all document analysis',
-        'Explanation of legal reasoning',
-        'Privilege and confidentiality protection',
-        'Version control for evolving case law'
+        'Document version tracking',
+        'Analysis history',
+        'Confidentiality considerations',
+        'Case management integration'
       ],
       benefits: [
-        'Enhanced due diligence capabilities',
-        'Clear documentation for legal proceedings',
-        'Reduced risk of oversight in document review',
-        'Improved collaboration between legal teams'
+        'Document review support',
+        'Maintain analysis records',
+        'Support legal workflows',
+        'Team collaboration features'
       ]
     },
     finance: {
-      title: 'Financial Decision Making',
-      description: 'Bring transparency to AI-driven financial decisions, from credit scoring to investment recommendations.',
+      title: 'Financial Services',
+      description: 'Supporting transparency in financial decision-making processes.',
       features: [
-        'Explainable credit decisions',
-        'Audit trail for investment recommendations',
-        'Regulatory compliance tracking',
-        'Bias detection and mitigation'
+        'Decision tracking',
+        'Recommendation documentation',
+        'Compliance support',
+        'Bias monitoring'
       ],
       benefits: [
-        'Compliance with financial regulations',
-        'Improved risk assessment',
-        'Enhanced customer trust',
-        'Faster resolution of disputes'
+        'Document decision factors',
+        'Support risk assessment',
+        'Enhance transparency',
+        'Resolve inquiries efficiently'
       ]
     }
   };
@@ -83,10 +83,10 @@ const UseCaseDeepDive = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#333333] mb-4">
-            Industry-Specific Solutions
+            Industry Applications
           </h2>
           <p className="text-lg text-[#666666] max-w-3xl mx-auto">
-            Tailored AI transparency solutions for your industry's unique challenges
+            Potential applications across different sectors
           </p>
         </motion.div>
 

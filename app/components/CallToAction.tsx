@@ -21,7 +21,7 @@ const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Ready to Bring Transparency to Your AI?
+          Interested in Learning More?
         </motion.h2>
         
         <motion.p 
@@ -31,7 +31,7 @@ const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Join our waitlist to be the first to experience how Audit can transform your AI systems into fully transparent and trustworthy partners.
+          Join our waitlist to stay updated on our progress and be notified when we launch.
         </motion.p>
         
         <motion.div
@@ -64,7 +64,7 @@ const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          No credit card required • 14-day free trial • Cancel anytime
+          Currently in development
         </motion.div>
       </div>
       

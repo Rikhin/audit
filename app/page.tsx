@@ -125,8 +125,8 @@ const HeroSection = () => {
             Audit: AI, <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">Explained</span>.
           </h1>
           <p className="text-xl text-gray-300 mt-12 mb-16 max-w-3xl mx-auto leading-relaxed">
-            The definitive solution for tracing model outputs and decisions in regulated industries. 
-            Go beyond retrieval to understand exactly why your AI makes the choices it does.
+            A tool for understanding and tracing AI model outputs and decisions.
+            Gain insights into how your AI models make their predictions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -147,7 +147,7 @@ const HeroSection = () => {
           </div>
           
           <div className="mt-8 text-sm text-gray-400">
-            SOC 2 Compliant • HIPAA Ready • 99.9% Uptime
+            Currently in Development
           </div>
         </div>
       </div>
