@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Twitter, Github, Linkedin, Mail } from 'lucide-react';
+import EmailDialog from './EmailDialog';
 
 const Footer = () => {
+  const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
+  const [emailSubject, setEmailSubject] = useState('Contact - Audit Tool');
+
   const currentYear = new Date().getFullYear();
   
   const footerLinks = [
@@ -30,7 +34,10 @@ const Footer = () => {
       links: [
         { name: 'About Us', href: '#' },
         { name: 'Careers', href: '#' },
-        { name: 'Contact', href: 'mailto:rikhinkavuru@icloud.com?subject=Contact - Audit Tool&body=Hello, I would like to get in touch regarding Audit Tool.' },
+        { name: 'Contact', href: '#', onClick: () => {
+          setEmailSubject('Contact - Audit Tool');
+          setIsEmailDialogOpen(true);
+        }},
         { name: 'Press', href: '#' },
       ],
     },
@@ -49,7 +56,15 @@ const Footer = () => {
     { icon: <Twitter className="h-5 w-5" />, href: 'https://twitter.com', label: 'Twitter' },
     { icon: <Github className="h-5 w-5" />, href: 'https://github.com', label: 'GitHub' },
     { icon: <Linkedin className="h-5 w-5" />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <Mail className="h-5 w-5" />, href: 'mailto:rikhinkavuru@icloud.com', label: 'Email' },
+    { 
+      icon: <Mail className="h-5 w-5" />, 
+      href: '#', 
+      label: 'Email',
+      onClick: () => {
+        setEmailSubject('Contact - Audit Tool');
+        setIsEmailDialogOpen(true);
+      }
+    },
   ];
 
   return (
@@ -73,7 +88,8 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href={social.href}
-                  target="_blank"
+                  onClick={social.onClick}
+                  target={social.onClick ? "_self" : "_blank"}
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                   whileHover={{ y: -2 }}
@@ -93,6 +109,7 @@ const Footer = () => {
                   <li key={linkIndex}>
                     <Link 
                       href={link.href}
+                      onClick={link.onClick}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.name}
@@ -123,6 +140,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <EmailDialog 
+        isOpen={isEmailDialogOpen} 
+        onClose={() => setIsEmailDialogOpen(false)}
+        subject={emailSubject}
+      />
     </footer>
   );
 };

@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import React from 'react'
 import './globals.css'
+import {
+  ClerkProvider,
+  SignedIn,
+  UserButton,
+} from "@clerk/nextjs"
 
 export const metadata: Metadata = {
   title: 'AI Traceability Tool - AI decisions, explained.',
@@ -14,10 +19,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased">
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="dark">
+        <body className="antialiased">
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   )
-} 
+}

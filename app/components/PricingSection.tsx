@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Zap, ArrowRight } from 'lucide-react';
+import EmailDialog from './EmailDialog';
 
 const PricingSection = () => {
+  const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
+  const [emailSubject, setEmailSubject] = useState('Pricing Inquiry - Audit Tool');
+
   const pricingTiers = [
     {
       name: 'Starter',
@@ -52,6 +56,11 @@ const PricingSection = () => {
       highlight: false
     }
   ];
+
+  const handleContactClick = (tierName: string) => {
+    setEmailSubject(`${tierName} Pricing Inquiry - Audit Tool`);
+    setIsEmailDialogOpen(true);
+  };
 
   return (
     <section id="pricing" className="relative py-24 bg-black overflow-hidden">
@@ -125,6 +134,7 @@ const PricingSection = () => {
                     ? 'bg-gradient-to-r from-electric to-blue-500 text-charcoal hover:opacity-90' 
                     : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                 }`}
+                onClick={() => tier.cta === 'Contact Us' ? handleContactClick(tier.name) : null}
               >
                 {tier.cta}
               </button>
@@ -145,15 +155,24 @@ const PricingSection = () => {
         
         <div className="mt-16 text-center">
           <p className="text-gray-400 mb-6">Have questions about our plans?</p>
-          <a 
-            href="mailto:rikhinkavuru@icloud.com?subject=Pricing Inquiry - Audit Tool&body=Hello, I have a question about your pricing plans." 
+          <button 
+            onClick={() => {
+              setEmailSubject('Pricing Inquiry - Audit Tool');
+              setIsEmailDialogOpen(true);
+            }}
             className="text-electric hover:text-white font-medium flex items-center justify-center mx-auto group"
           >
             Contact us
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </button>
         </div>
       </div>
+
+      <EmailDialog 
+        isOpen={isEmailDialogOpen} 
+        onClose={() => setIsEmailDialogOpen(false)}
+        subject={emailSubject}
+      />
     </section>
   );
 };

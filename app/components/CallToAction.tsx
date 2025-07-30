@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import EmailDialog from './EmailDialog';
 
 interface CallToActionProps {
   onOpenWaitlist: () => void;
 }
 
 const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
+  const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
+
   return (
     <section className="relative py-32 overflow-hidden bg-gradient-to-b from-charcoal-800 to-charcoal-900">
       <div className="absolute inset-0 opacity-30" style={{
@@ -49,12 +52,12 @@ const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <a 
-            href="mailto:rikhinkavuru@icloud.com?subject=Schedule a Demo - Audit Tool&body=Hello, I'd like to schedule a demo for the Audit Tool. Please provide available time slots." 
+          <button 
+            onClick={() => setIsEmailDialogOpen(true)}
             className="px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-lg hover:bg-white/10 transition-colors inline-block"
           >
             Schedule a Demo
-          </a>
+          </button>
         </motion.div>
         
         <motion.div 
@@ -71,6 +74,12 @@ const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
       {/* Animated background elements */}
       <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-electric/10 blur-3xl"></div>
       <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-purple-500/10 blur-3xl"></div>
+
+      <EmailDialog 
+        isOpen={isEmailDialogOpen} 
+        onClose={() => setIsEmailDialogOpen(false)}
+        subject="Schedule a Demo - Audit Tool"
+      />
     </section>
   );
 };

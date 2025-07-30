@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Users } from 'lucide-react';
+import EmailDialog from './EmailDialog';
 
 const TrustSection = () => {
+  const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
+
   const features = [
     {
       icon: <Shield className="h-6 w-6 text-electric" />,
@@ -62,17 +65,23 @@ const TrustSection = () => {
 
         <div className="mt-16 text-center">
           <p className="text-gray-400 mb-6 text-lg">Questions about our approach to security?</p>
-          <a 
-            href="mailto:rikhinkavuru@icloud.com?subject=Security Inquiry - Audit Tool&body=Hello, I have questions about your security practices." 
+          <button 
+            onClick={() => setIsEmailDialogOpen(true)}
             className="inline-flex items-center px-6 py-3 bg-electric/10 hover:bg-electric/20 text-electric font-medium rounded-lg mx-auto group transition-colors duration-300 border border-electric/20 hover:border-electric/50"
           >
             Contact Us
             <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
+
+      <EmailDialog 
+        isOpen={isEmailDialogOpen} 
+        onClose={() => setIsEmailDialogOpen(false)}
+        subject="Security Inquiry - Audit Tool"
+      />
     </section>
   );
 };
