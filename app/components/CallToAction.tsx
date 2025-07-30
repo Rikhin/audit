@@ -50,7 +50,7 @@ const CallToAction: React.FC<CallToActionProps> = ({ onOpenWaitlist }) => {
           </button>
           
           <a 
-            href="mailto:rikhinkavuru@icloud.com?subject=Schedule a Demo - Audit Tool&body=Hello, I'd like to schedule a demo of the Audit tool." 
+            href="mailto:rikhinkavuru@icloud.com?subject=Schedule a Demo - Audit Tool&body=Hello, I'd like to schedule a demo for the Audit Tool. Please provide available time slots." 
             className="px-8 py-4 bg-white/5 border border-white/10 text-white font-medium rounded-lg hover:bg-white/10 transition-colors inline-block"
           >
             Schedule a Demo

@@ -30,7 +30,7 @@ const Footer = () => {
       links: [
         { name: 'About Us', href: '#' },
         { name: 'Careers', href: '#' },
-        { name: 'Contact', href: '#' },
+        { name: 'Contact', href: 'mailto:rikhinkavuru@icloud.com?subject=Contact - Audit Tool&body=Hello, I would like to get in touch regarding Audit Tool.' },
         { name: 'Press', href: '#' },
       ],
     },
