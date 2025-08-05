@@ -118,7 +118,7 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-charcoal overflow-hidden">
       <HeroBackground />
-      
+      <div className="hidden-dot"></div>
       <div className="container-max px-4 z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-none tracking-tight">
