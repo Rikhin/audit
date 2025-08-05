@@ -1,12 +1,32 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<{ text: string; isError: boolean } | null>(null)
+  const [waitlistCount, setWaitlistCount] = useState<number | null>(null)
+
+  useEffect(() => {
+    const fetchWaitlistCount = async () => {
+      try {
+        const response = await fetch('/api/waitlist-count')
+        if (response.ok) {
+          const data = await response.json()
+          setWaitlistCount(data.count)
+        }
+      } catch (error) {
+        console.error('Failed to fetch waitlist count:', error)
+      }
+    }
+
+    if (isOpen) {
+      fetchWaitlistCount()
+    }
+  }, [isOpen])
 
   if (!isOpen) return null
 
@@ -65,7 +85,13 @@ export function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: (
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-gray-900 rounded-2xl border border-gray-700 p-6 w-full max-w-md relative">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        transition={{ duration: 0.2 }}
+        className="bg-gray-900 rounded-2xl border border-gray-700 p-6 w-full max-w-md relative"
+      >
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
@@ -109,9 +135,19 @@ export function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: (
             >
               {isLoading ? 'Joining...' : 'Join Waitlist'}
             </button>
+            {waitlistCount !== null && (
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-center text-sm text-gray-400 mt-4"
+              >
+                Join {waitlistCount} others on the waitlist!
+              </motion.p>
+            )}
           </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   )
 }
