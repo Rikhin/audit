@@ -70,6 +70,12 @@ export function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: (
       
       // Only close automatically on success
       if (response.status === 200) {
+        // Refetch waitlist count after successful submission
+        const updatedCountResponse = await fetch('/api/waitlist-count')
+        if (updatedCountResponse.ok) {
+          const updatedData = await updatedCountResponse.json()
+          setWaitlistCount(updatedData.count)
+        }
         setTimeout(onClose, 2000)
       }
     } catch (error: any) {
