@@ -163,15 +163,3 @@ html {
   background: rgba(0, 229, 255, 0.3);
   color: white;
 }
-
-.hidden-dot {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background-color: black;
-  opacity: 0.001;
-  top: 50%;
-  left: 50%;
-  pointer-events: none;
-  z-index: -1;
-}
